@@ -40,7 +40,7 @@ function setName() {
         case "🍦 Javi":
         case "🔐 Richard":
         case "🚗 Paco":
-        case "🛴 Edu":
+        case "🏎️ Edu":
         case "🫒 Adrián":
         case "🥋 Aarón":
         case "😎 Cristian":
