@@ -32,7 +32,7 @@ function setName() {
         case "🙈 Ana":
         case "🙊 Lulu":
         case "🙉 Ascen":
-        case "🪣 Tania":
+        case "🥫 Tania":
         case "🍳 Nerea":
         case "💅🏼 Katia":
             $("#gender").text('a');
@@ -48,16 +48,13 @@ function setName() {
             break;
     }
 
-
     $(".user-id-block").hide(2000);
     $(".user-id-btn-block").hide(2000);
     $(".bienvenida-block").fadeToggle(2000);
     $(".button-menu-btn-block").delay(3000).fadeToggle(1000);
-
 }
 
 function verMenu() {
-    
     if ( botonMenu.text() == "Ocultar menú") {
         botonMenu.text("Ver el menú");
     } else {
@@ -67,7 +64,6 @@ function verMenu() {
     $("#bienvenida-texto-block").slideToggle(2000);
     $(".menu-block").fadeToggle(1000);
 
-
     despliegue();
 }
 
@@ -75,6 +71,7 @@ function despliegue() {
     if ($('.count-block').is(':visible')) {
         showBtnCuentaAtras();
     }
+
     setTimeout(function() { $(".bloque1").slideToggle(800); }, 600);
     setTimeout(function() { $(".bloque2").slideToggle(800); }, 1200);
     setTimeout(function() { $(".bloque3").slideToggle(800); }, 1800);
@@ -85,11 +82,9 @@ function despliegue() {
     } else {
         setTimeout(function() { $(".bloque6").slideToggle(1000); }, 3600);
     }
-
 }
 
 function showBtnCuentaAtras() {
-
     if ( botonCuenta.text() == "Ocultar cuenta atrás") {
         botonCuenta.text("Y, ¿cuánto queda?");
     } else {
@@ -98,7 +93,6 @@ function showBtnCuentaAtras() {
 
     $(".count-block").slideToggle(1000);
     $('html, body').animate({scrollTop:0}, 'slow');
-
 }
 
 function brillaEstrella() {
@@ -108,11 +102,9 @@ function brillaEstrella() {
     } else {
         brilloEstrella++;
     }
-    
 }
 
 var cuentaAtras = setInterval(function() {
-
     var ahora = new Date().getTime();
     var diferencia = fechaFinal - ahora;
     var horas = Math.floor(diferencia / (1000 * 60 * 60));
@@ -124,5 +116,6 @@ var cuentaAtras = setInterval(function() {
     if (diferencia < 0) {
         clearInterval(cuentaAtras);
         document.getElementById('felicitacion').innerHTML = "🎉🥳🎊🍾<br/>¡Feliz 2024!<br/>🍾🎊🥳🎉";
+        document.title = "🎉 ¡Feliz 2024! 🎉";
     }
 }, 1000);
