@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felices Fiestas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="m-3">
+    <div class="my-5">
+        <span class="estrella" onclick="brillaEstrella()">🌟</span>
+        <h1 class="text-center felicitacion mb-5" id="felicitacion">🎄¡Feliz Nochevieja!🎄</h1>
+        <div class="count-block my-3 oculto">
+            <h3 class="text-center">🕛 ¡<span id="cuentaAtras">CUENTA ATRÁS</span> para el 2024! 🕛</3>
+        </div>
+        <div class="user-id-block my-3 d-grid gap-2 col-7 mx-auto">
+            <label for="nameList" class="form-label text-center user-id-block fs-1 mb-3">🫣 ¿Quién eres?</label>
+            <select class="form-select user-id-block fs-4" id="nameList" onchange="habilitarBoton()">
+                <option selected disabled value="0">😁 Elige tu nombre</option>
+                <option value="👑 Abuela Viki">👑 La Abuela Viki</option>
+                <option value="🙈 Ana">🙈 Ana</option>
+                <option value="🙊 Lulu">🙊 Lulu</option>
+                <option value="🙉 Ascen">🙉 Ascen</option>
+                <option value="🍦 Javi">🍦 Javi</option>
+                <option value="🔐 Richard">🔐 Richard</option>
+                <option value="🚗 Paco">🚗 Paco</option>
+                <option value="🛴 Edu">🛴 Edu</option>
+                <option value="🪣 Tania">🪣 Tania</option>
+                <option value="🫒 Adrián">🫒 Adrián</option>
+                <option value="🥋 Aarón">🥋 Aarón</option>
+                <option value="🍳 Nerea">🍳 Nerea</option>
+                <option value="💅🏼 Katia">💅🏼 Katia</option>
+                <option value="😎 Cristian">😎 Cristian</option>
+            </select>
+        </div>        
+        <div class="user-id-btn-block d-grid gap-2 col-6 mx-auto my-3 pt-3 oculto">
+            <button type="button" id="boton-nombre" class="btn btn-success user-id-btn-block fs-4 oculto" onclick="setName()">¡Soy yo! 🙋</button>
+        </div>
+        <div class="bienvenida-block my-3 oculto">
+            <h1 class="text-center fs-1 mb-3" id="nombre">NOMBRE</h1>
+            <p id="bienvenida-texto-block" class="text-center mx-5 text-justify fs-3">Bienvenid<label id="gender" class="gender">a</label> <label id="user-name" class="user-name"></label> a la cena de nochevieja de los Chaparro Arteaga. 
+            Te deseamos que pases una feliz noche con todos nosotros, que tengas una genial salida del 2023 y una feliz entrada al 2024 🥰</p>
+        </div>
+
+        <div class="button-menu-block d-grid gap-2 col-6 mx-auto oculto my-5">
+            <button type="button" id="button-menu-btn-block" class="btn btn-success button-menu-btn-block fs-4 oculto" onclick="verMenu()">Ver el menú</button>
+        </div>
+        
+        <div class="menu-block mt-3 mb-5 oculto">
+            <h2 class="text-center mb-2 fs-1">Menú de Nochevieja</h2>
+            <h3 class="text-center mb-4 fs-2">La cena</h3>
+
+            <div class="bloque1 oculto mb-4">
+                <h4 class="text-center fs-3 mb-3">Entrantes</h4>
+                <p class="cena-entrantes text-center fs-5">
+                    · Tartar de salmón con 🦐 langostino, pepinillo, 🫒 alcaparras, cebolleta y zumo de 🍋🍊 cítricos<br/>
+                    · 🥔🥚🥕 Ensaladilla rusa<br/>
+                    · Patés, 🍓 mermeladas y 🧀 quesos surtidos<br/>
+                    · 🐖 Embutidos ibéricos<br/>
+                    · 🦐 Langostinos a la plancha<br/>
+                    · Vasitos de 🐙 pulpo a la gallega<br/>
+                    · 🐯 Tigres, leones...! 💪🏼<br/>
+                    · 🫑 Pimientos del piquillo ¡Saaabrosones 👅!<br/>
+                    · 🤲🏼 Croquetas 🤲🏼<br/>
+                    · 🦐🦀🐳 Marisco, etc<br/>
+                </p>
+            </div>
+
+            <div class="bloque2 oculto mb-4">
+                <h4 class="text-center fs-3 mb-3">Plato principal</h4>
+                <p class="cena-entrantes text-center fs-5">
+                    · 🐑 Cordero en 🥫 salsa
+                </p>
+            </div>
+            
+            <div class="bloque3 oculto mb-4">
+                <h4 class="text-center fs-3 mb-3">Postres</h4>
+                <p class="cena-entrantes text-center fs-5">
+                    · 🍰 Tarta de la 👵🏼👑 abuela <br/>
+                    · 🥜🍫🍬 Dulces surtidos de 🎄 Navidad
+                </p>
+            </div>
+            
+            <h6 class="text-center mb-4 fs-4 bloque4 oculto mb-4">❗️ Y todo esto bien regado con 🥤 refrescos y 🍷 vinos surtidos</h6>
+
+            <div class="bloque5 oculto">
+                <h3 class="text-center fs-2 mb-4">Y a las 12 de la noche...</h3>
+                <p class="cena-entrantes text-center fs-5">
+                    · 🔔 Las Campanadas con 🍇 las uvas 🍇<br/>
+                    · 🥂 El Brindis 👨‍👩‍👧‍👦🌟<br/>
+                    · 💃🏼 Bailes, 🎲 juegos y 🎤 karaoke<br/>
+                </p>
+            </div>
+            
+        </div>
+        <div class="count-btn-block d-grid gap-2 col-6 mx-auto oculto my-3">
+            <button type="button" id="btn-cuenta" class="btn btn-success btn-sm fs-4 mb-5 bloque6 oculto" onclick="showBtnCuentaAtras()">Y, ¿cuánto queda?</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="estrellaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-6" id="exampleModalLabel">🌟 La estrella que más brilla</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="./img/abuelo.jpg" class="img-fluid rounded img-estrella" alt="La estrella que más brilla">
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
