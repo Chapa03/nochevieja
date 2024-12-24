@@ -11,7 +11,7 @@ var myModal = new bootstrap.Modal('#estrellaModal', {
   })
 var modalToggle = document.getElementById('toggleMyModal');
 
-var fechaFinal = new Date("Jan 1, 2024 00:00:00 GMT+0100").getTime();
+var fechaFinal = new Date("Jan 1, 2025 00:00:00 GMT+0100").getTime();
 
 function habilitarBoton() {
     if ($("#nameList").value !== '0') {
@@ -35,6 +35,14 @@ function setName() {
         case "🥫 Tania":
         case "🍳 Nerea":
         case "💅🏼 Katia":
+        case "🇨🇴 Made":
+        case "🇪🇸 Katia":
+        case "👵🏻 Carmeli":
+        case "🪆 Ascen":
+        case "👩🏻‍💼 Lourdes":
+        case "👩🏻‍🏫 Bea":
+        case "💉 Chusy":
+        case "🇨🇷 Valeria":
             $("#gender").text('a');
             break;
         case "🍦 Javi":
@@ -43,6 +51,14 @@ function setName() {
         case "🏎️ Edu":
         case "🫒 Adrián":
         case "🥋 Aarón":
+        case "🍷 Adrián":
+        case "👶🏼 Marco":
+        case "🌟 Fernando":
+        case "👷🏼‍♂️ Emilio":
+        case "🎮 David":
+        case "🍷 Adrián":
+        case "🐕 Antonio":
+        case "🎾 Carlos":
         case "😎 Cristian":
             $("#gender").text('o');
             break;

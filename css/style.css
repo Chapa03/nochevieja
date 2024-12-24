@@ -49,6 +49,10 @@ span.estrella {
 }
 
 .img-estrella {
-    height: 600px;
+    height: auto;
     width: auto;
+}
+
+.bloque4 {
+    padding-bottom: 2em;
 }
